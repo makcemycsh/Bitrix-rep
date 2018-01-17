@@ -1,0 +1,12 @@
+/*
+!/www/
+!/.gitignore
+!/composer*
+!/README.md
+!/.gitlab-ci.yml
+
+*.DS_Store
+/www/upload/
+/www/bitrix/
+/www/test/
+/www/logs/

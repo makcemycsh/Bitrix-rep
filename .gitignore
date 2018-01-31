@@ -1,7 +1,8 @@
 /*
 !/www/
 !/.gitignore
-!/composer*
+!/composer.phar
+!/composer.json
 !/README.md
 !/.gitlab-ci.yml
 
@@ -10,3 +11,4 @@
 /www/bitrix/
 /www/test/
 /www/logs/
+/www/web.config

@@ -4,55 +4,90 @@
  */
 
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
-$APPLICATION->SetTitle('Скидки');
+$APPLICATION->SetTitle("Скидки");
 ?>
 
-    <div class="content">
-        <div class="top_header_line"></div>
-        <div class="centered">
 
-            <div class="grid cf ">
-                <section class="col-4-5 cf">
-                    <div class="delivery_information">
-                        <!-- Указаны товары и скидка. Берутся цены из товаров и считается новая цена -->
-                        <div>
-                            <h3>Скидка на витамины!</h3>
-                            <h4 class="date">26.10.2017 - 15.11.2017</h4>
-                            <p>Специальное предложение на детские витамины.</p>
-                            <p>Список товаров, участвующих в акции:</p>
-                            <ul class="discount-products">
-                                <li>Витаминки 1 - <span class="old-price">200</span> <span class="new-price">140<span class="rouble">o</span></span></li>
-                                <li>Витаминки 2 - <span class="old-price">150</span> <span class="new-price">105<span class="rouble">o</span></span></li>
-                                <li>Витаминки 3 - <span class="old-price">250</span> <span class="new-price">175<span class="rouble">o</span></span></li>
-                                <li>Витаминки 4 - <span class="old-price">220</span> <span class="new-price">154<span class="rouble">o</span></span></li>
-                            </ul>
-                        </div>
-                        <!-- Указана только скидка -->
-                        <div>
-                            <h3>Чёрная пятница</h3>
-                            <h4 class="date">26.10.2017 - 15.11.2017</h4>
-                            <p>Чёрная пятница в нашей аптеке!</p>
-                            <p>Скидка на товары до 80%</p>
-                        </div>
-                        <!-- Указаны только товары -->
-                        <div>
-                            <h3>Скидки на БАДы</h3>
-                            <h4 class="date">26.10.2017 - 15.11.2017</h4>
-                            <p>У нас тут залежалось немного биологически активных добавок, поэтому мы решили сделать на них скидку.</p>
-                            <p>Список товаров, участвующих в акции:</p>
-                            <ul class="discount-products">
-                                <li>БАД 1</li>
-                                <li>БАД 2</li>
-                                <li>БАД 3</li>
-                                <li>БАД 4</li>
-                                <li>БАД 5</li>
-                            </ul>
-                        </div>
-                    </div>
+<div class="content">
+	<div class="top_header_line">
+	</div>
+	<div class="centered">
+		<div class="grid cf ">
+ <section class="col-4-5 cf">
+			<div class="delivery_information">
+				 
+<?$APPLICATION->IncludeComponent(
+	"bitrix:news.list", 
+	"discount-list1", 
+	array(
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"ADD_SECTIONS_CHAIN" => "Y",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"CHECK_DATES" => "Y",
+		"DETAIL_URL" => "",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"DISPLAY_TOP_PAGER" => "N",
+		"FIELD_CODE" => array(
+			0 => "DATE_ACTIVE_FROM",
+			1 => "DATE_ACTIVE_TO",
+			2 => "",
+		),
+		"FILTER_NAME" => "",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"IBLOCK_ID" => "2",
+		"IBLOCK_TYPE" => "cont",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"INCLUDE_SUBSECTIONS" => "Y",
+		"MESSAGE_404" => "",
+		"NEWS_COUNT" => "20",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TITLE" => "Новости",
+		"PARENT_SECTION" => "",
+		"PARENT_SECTION_CODE" => "",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"PROPERTY_CODE" => array(
+			0 => "PER",
+			1 => "PRODUCT",
+			2 => "",
+			3 => "",
+		),
+		"SET_BROWSER_TITLE" => "Y",
+		"SET_LAST_MODIFIED" => "N",
+		"SET_META_DESCRIPTION" => "Y",
+		"SET_META_KEYWORDS" => "Y",
+		"SET_STATUS_404" => "N",
+		"SET_TITLE" => "Y",
+		"SHOW_404" => "N",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "ASC",
+		"SORT_ORDER2" => "ASC",
+		"STRICT_SECTION_CHECK" => "N",
+		"COMPONENT_TEMPLATE" => "discount-list1"
+	),
+	false
+);?>
 
-                </section>
-            </div>
-        </div>
-    </div>
-
-<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
+			</div>
+ </section>
+		</div>
+	</div>
+</div>
+ <br><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

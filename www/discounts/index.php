@@ -5,13 +5,12 @@
 
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
 $APPLICATION->SetTitle("Скидки");
-?>
-<div class="delivery_information">
+?><div class="delivery_information">
 				 
 <?$APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"discount-list1", 
-	array(
+	"bitrix:news.list",
+	"discount-list1",
+	Array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
@@ -24,6 +23,7 @@ $APPLICATION->SetTitle("Скидки");
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
+		"COMPONENT_TEMPLATE" => "discount-list1",
 		"DETAIL_URL" => "",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"DISPLAY_DATE" => "Y",
@@ -31,11 +31,7 @@ $APPLICATION->SetTitle("Скидки");
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(
-			0 => "DATE_ACTIVE_FROM",
-			1 => "DATE_ACTIVE_TO",
-			2 => "",
-		),
+		"FIELD_CODE" => array(0=>"DATE_ACTIVE_FROM",1=>"DATE_ACTIVE_TO",2=>"",),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "2",
@@ -54,16 +50,11 @@ $APPLICATION->SetTitle("Скидки");
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(
-			0 => "PER",
-			1 => "PRODUCT",
-			2 => "",
-			3 => "",
-		),
-		"SET_BROWSER_TITLE" => "Y",
+		"PROPERTY_CODE" => array(0=>"PER",1=>"PRODUCT",2=>"",3=>"",),
+		"SET_BROWSER_TITLE" => "N",
 		"SET_LAST_MODIFIED" => "N",
-		"SET_META_DESCRIPTION" => "Y",
-		"SET_META_KEYWORDS" => "Y",
+		"SET_META_DESCRIPTION" => "N",
+		"SET_META_KEYWORDS" => "N",
 		"SET_STATUS_404" => "N",
 		"SET_TITLE" => "Y",
 		"SHOW_404" => "N",
@@ -71,11 +62,8 @@ $APPLICATION->SetTitle("Скидки");
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "ASC",
 		"SORT_ORDER2" => "ASC",
-		"STRICT_SECTION_CHECK" => "N",
-		"COMPONENT_TEMPLATE" => "discount-list1"
-	),
-	false
+		"STRICT_SECTION_CHECK" => "N"
+	)
 );?>
 
-			</div>
-<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
+			</div><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

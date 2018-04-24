@@ -6,15 +6,7 @@
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
 $APPLICATION->SetTitle("Скидки");
 ?>
-
-
-<div class="content">
-	<div class="top_header_line">
-	</div>
-	<div class="centered">
-		<div class="grid cf ">
- <section class="col-4-5 cf">
-			<div class="delivery_information">
+<div class="delivery_information">
 				 
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
@@ -86,8 +78,4 @@ $APPLICATION->SetTitle("Скидки");
 );?>
 
 			</div>
- </section>
-		</div>
-	</div>
-</div>
- <br><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
+<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

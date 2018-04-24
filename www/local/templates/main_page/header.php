@@ -31,7 +31,7 @@ IncludeTemplateLangFile(__FILE__);
         <!-- begin header  -->
         <header class="header">
             <div class="centered cf">
-                <a href="index.html" class="logo" style='padding-top: 23px;'><img src="/local/images/logo.png" alt=""></a>
+                <a href="/" class="logo" style='padding-top: 23px;'><img src="/local/images/logo.png" alt=""></a>
                 <div class="header_user">
                     <ul class="cf">
                         <li class="hu_user">
@@ -98,12 +98,24 @@ IncludeTemplateLangFile(__FILE__);
                             </div>
                         </div>
                     </div>
-
-                    <nav class="hn_nav">
-                        <a href="delivery.html">Доставка и оплата</a>
-                        <a href="shops.html">Магазины</a>
-                        <a href="/contacts/">Контакты</a>
-                    </nav>
+            <!-- top_menu -->
+             <?$APPLICATION->IncludeComponent(
+                "bitrix:menu",
+                "top_menu",
+                Array(
+                    "ALLOW_MULTI_SELECT" => "N",
+                    "CHILD_MENU_TYPE" => "left",
+                    "DELAY" => "N",
+                    "MAX_LEVEL" => "1",
+                    "MENU_CACHE_GET_VARS" => array(0=>"",),
+                    "MENU_CACHE_TIME" => "3600",
+                    "MENU_CACHE_TYPE" => "N",
+                    "MENU_CACHE_USE_GROUPS" => "Y",
+                    "ROOT_MENU_TYPE" => "top",
+                    "USE_EXT" => "N"
+                )
+            );?>
+            <!-- /end top_menu -->
                 </div>
             </div>
         </header>
@@ -116,7 +128,7 @@ IncludeTemplateLangFile(__FILE__);
             <!-- если картинка светлая то тексту добавляется класс flex-text-dark -->
             <ul class="slides ">
                 <li>
-                    <img src="img/temp/slide1.jpg" />
+                    <img src="/local/images/temp/slide1.jpg" />
                     <div class="flex-text flex-text-dark">
                         <p class="ft-title">Компливит<br> кальций </p>
                         <div class="ft-row-price">
@@ -128,7 +140,7 @@ IncludeTemplateLangFile(__FILE__);
                     </div>
                 </li>
                 <li>
-                    <img src="img/temp/slide2.jpg" />
+                    <img src="/local/images/temp/slide2.jpg" />
                     <div class="flex-text">
                         <p class="ft-title">Компливит<br> кальций  </p>
                         <div class="ft-row-price">
@@ -140,7 +152,7 @@ IncludeTemplateLangFile(__FILE__);
                     </div>
                 </li>
                 <li>
-                    <img src="img/temp/slide3.jpg" />
+                    <img src="/local/images/temp/slide3.jpg" />
                     <div class="flex-text">
                         <p class="ft-title">Компливит<br> кальций  </p>
                         <div class="ft-row-price">
@@ -152,7 +164,7 @@ IncludeTemplateLangFile(__FILE__);
                     </div>
                 </li>
                 <li>
-                    <img src="img/temp/slide4.jpg" />
+                    <img src="/local/images/temp/slide4.jpg" />
                     <div class="flex-text  flex-text-dark">
                         <p class="ft-title">Компливит <br>кальций  </p>
                         <div class="ft-row-price">

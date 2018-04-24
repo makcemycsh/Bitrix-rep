@@ -1,3 +1,7 @@
+ </section>
+        </div>
+    </div>
+</div>
 <div class="block_footer">
 
 </div>
@@ -9,24 +13,48 @@
     <div class="wrp_foo_centered">
         <div class="centered">
             <div class="foo_comp">
-                <a href="index.html" class="logo"><img src="/local/images/foologo.png" alt=""></a>
+                <a href="/" class="logo"><img src="/local/images/foologo.png" alt=""></a>
                 <div class="copy">
                     &copy; ООО «Интренет-аптека»
                 </div>
             </div>
             <div class="foo_contact">
-                <div class="fc_telephone"><sub>(8182)</sub> 66-00-77</div>
+                <div class="fc_telephone"><?$APPLICATION->IncludeComponent(
+                        "bitrix:main.include",
+                        "template1",
+                        Array(
+                            "AREA_FILE_SHOW" => "file",
+                            "AREA_FILE_SUFFIX" => "inc",
+                            "COMPONENT_TEMPLATE" => ".default",
+                            "EDIT_TEMPLATE" => "",
+                            "PATH" => "/local/includes/main_tel.php"
+                        )
+                    );?></div>
                 <div class="foo_address">
                     Архангельск <br>
                     пр. Троицкий, 999
                 </div>
             </div>
-            <nav class="foo_nav">
-                <a href="#">О компании</a>
-                <a href="/discounts/">Акции</a>
-                <a href="questions.html">Вопросы и ответы</a>
-                <a href="/news/">Новости</a>
-            </nav>
+            <!-- bot_menu  -->
+                 <?$APPLICATION->IncludeComponent(
+                    "bitrix:menu",
+                    "bot_menu",
+                    Array(
+                        "ALLOW_MULTI_SELECT" => "N",
+                        "CHILD_MENU_TYPE" => "left",
+                        "COMPONENT_TEMPLATE" => ".default",
+                        "DELAY" => "N",
+                        "MAX_LEVEL" => "1",
+                        "MENU_CACHE_GET_VARS" => "",
+                        "MENU_CACHE_TIME" => "3600",
+                        "MENU_CACHE_TYPE" => "N",
+                        "MENU_CACHE_USE_GROUPS" => "Y",
+                        "ROOT_MENU_TYPE" => "bottom",
+                        "USE_EXT" => "N"
+                    )
+                );?>
+
+                <!-- /end bot-menu -->
             <a href="http://oneway.su/" class="foo_create" target="_blank">
                 <span class="foo_c_top">Создание сайта - </span>
                 <span class="foo_c_logo"><img src="/local/images/create.png" alt=""></span>

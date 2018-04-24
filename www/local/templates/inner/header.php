@@ -1,10 +1,13 @@
-<?
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+IncludeTemplateLangFile(__FILE__);
+
 /**
  * @global \CMain $APPLICATION
  * @global \CUser $USER
  */
-?><!doctype html>
-<html lang="<?= LANGUAGE_ID ?>">
+?>
+<!doctype html>
+<html lang="<?=LANGUAGE_ID;?>-<?=strtoupper(LANGUAGE_ID);?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"

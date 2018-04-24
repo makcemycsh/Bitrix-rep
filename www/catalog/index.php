@@ -558,7 +558,6 @@ $APPLICATION->SetTitle('Каталог');
                 </section>
             </div>
         </div>
-
     </div>
     <!-- end content -->
 
@@ -723,6 +722,6 @@ $APPLICATION->SetTitle('Каталог');
 
 
         });
-
     </script>
+    
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

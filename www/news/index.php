@@ -1,12 +1,13 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("canonical", "http://bitrix-test.loc/news");
 $APPLICATION->SetTitle("Новости");
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
 	"news", 
 	array(
 		"ADD_ELEMENT_CHAIN" => "N",
-		"ADD_SECTIONS_CHAIN" => "Y",
+		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
 		"AJAX_OPTION_HISTORY" => "N",
@@ -87,7 +88,7 @@ $APPLICATION->SetTitle("Новости");
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",
-			"detail" => "#CODE#/",
+			"detail" => "#ELEMENT_CODE#/",
 		)
 	),
 	false

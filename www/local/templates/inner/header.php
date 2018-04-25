@@ -12,6 +12,19 @@ IncludeTemplateLangFile(__FILE__);
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+       
+        <?
+        $APPLICATION->AddBufferContent('ShowCanonical');
+
+        function ShowCanonical() {
+            global $APPLICATION;
+            if ($APPLICATION->GetPageProperty('canonical')) {
+                $canonical = $APPLICATION->SetPageProperty('canonical', $APPLICATION->GetPageProperty('canonical'));
+                return $canonical;
+            }
+        }
+        ?>  
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <? $APPLICATION->ShowHead() ?>
     <?

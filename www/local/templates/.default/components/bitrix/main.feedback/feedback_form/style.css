@@ -1,0 +1,28 @@
+div.mfeedback {}
+div.mf-name, div.mf-email, div.mf-captcha, div.mf-message {width:80%; padding-bottom:0.4em;}
+div.mf-name input, div.mf-email input {width:60%;}
+div.mf-message textarea {width: 60%;}
+span.mf-req {color:red;}
+div.mf-ok-text {color:green; font-weight:bold; padding-bottom: 1em;}
+
+.lastid::-webkit-inner-spin-button, .lastid::-webkit-outer-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0 !important;
+    -moz-appearance:textfield !important;
+
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.lastid{
+margin-bottom: 1em;
+}
+
+.feedback_form .wrap-input{
+overflow:hidden;
+transition:.6s;
+padding:0;
+max-height:100px;
+}

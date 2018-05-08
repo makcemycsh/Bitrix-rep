@@ -74,21 +74,20 @@ if(strlen($arResult["OK_MESSAGE"]) > 0)
 
 <script>	
 $(document).ready(function() {
-	$("input.lastid").change(function() {
+	$("input.lastid").keyup(function() {
 		if($("input.lastid").val() != ""){
-			$(".feedback_form .wrap-input").css('max-height','0');
-			$(".feedback_form .wrap-input").prop('disabled', true);
+			$(".feedback_form .wrap-input").hide();
+			$(".feedback_form .wrap-input input").prop('disabled', true);
 		}
 		else{
-			$(".feedback_form .wrap-input").css('max-height','100px');
-			$(".feedback_form .wrap-input").prop('disabled', false);
+			$(".feedback_form .wrap-input").show();
+			$(".feedback_form .wrap-input input").prop('disabled', false);
 		}
 	})
-});
 
-$(document).ready(function() {
     $('.feedback_form').submit(function(e) {
     var $form = $(this);
+       e.preventDefault(); 
        $.ajax({
 	        type: $form.attr('method'),
 	        url: $form.attr('action'),
@@ -97,8 +96,6 @@ $(document).ready(function() {
                $('.result-text').html(data);
             }
         });
-        //отмена действия по умолчанию для кнопки submit
-        e.preventDefault(); 
     });
 });
 </script>

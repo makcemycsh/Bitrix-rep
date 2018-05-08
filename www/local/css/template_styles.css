@@ -842,7 +842,7 @@ body {
   text-align: right;
   padding-top: 33px;
   min-width: 274px;
-  width: 30.5%;
+  width: 33.5%;
 }
 .header_user li {
   display: inline-block;
@@ -882,7 +882,7 @@ body {
 }
 .header_navigation {
   display: inline-block;
-  margin: 0 230px 0 307px;
+  margin: 0 290px 0 307px;
   padding: 30px 0 0 0;
   display: block;
   position: relative;

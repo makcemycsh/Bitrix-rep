@@ -20,9 +20,3 @@ input[type=number] {
 margin-bottom: 1em;
 }
 
-.feedback_form .wrap-input{
-overflow:hidden;
-transition:.6s;
-padding:0;
-max-height:100px;
-}

@@ -46,12 +46,28 @@ IncludeTemplateLangFile(__FILE__);
                             </i>
                             <a href="profile.html">Ярослава Марьина</a></li>
                         <li><a href="#">Выход</a></li>
-                        <li class="hu_cart"><i>
-                                <svg class="hu_cart_svg" width="14px" height="14.013px" viewBox="0 0 14 14.013">
-                                    <use xlink:href="#iconCart"></use>
-                                </svg>
-                            </i>
-                            <a href="cart.html">237<span class="rouble">o</span></a></li>
+                         <?$APPLICATION->IncludeComponent(
+                                   "bitrix:sale.basket.basket.line", 
+                                   "basket", 
+                                   array(
+                                      "COMPONENT_TEMPLATE" => "basket",
+                                      "HIDE_ON_BASKET_PAGES" => "Y",
+                                      "PATH_TO_AUTHORIZE" => "",
+                                      "PATH_TO_BASKET" => SITE_DIR."catalog/basket/",
+                                      "PATH_TO_ORDER" => SITE_DIR."personal/order/make/",
+                                      "PATH_TO_PERSONAL" => SITE_DIR."personal/",
+                                      "PATH_TO_PROFILE" => SITE_DIR."personal/",
+                                      "PATH_TO_REGISTER" => SITE_DIR."login/",
+                                      "POSITION_FIXED" => "N",
+                                      "SHOW_AUTHOR" => "N",
+                                      "SHOW_EMPTY_VALUES" => "Y",
+                                      "SHOW_NUM_PRODUCTS" => "N",
+                                      "SHOW_PERSONAL_LINK" => "N",
+                                      "SHOW_PRODUCTS" => "N",
+                                      "SHOW_TOTAL_PRICE" => "Y"
+                                  ),
+                                   false
+                               );?>
                     </ul>
                     <div class="hu_telephone"><?$APPLICATION->IncludeComponent(
                         "bitrix:main.include",

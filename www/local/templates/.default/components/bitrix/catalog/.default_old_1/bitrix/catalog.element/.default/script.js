@@ -1850,9 +1850,6 @@ window.JCCatalogElement.prototype.SelectOfferProp = function()
 		RowItems = null,
 		target = BX.proxy_context;
 
-
-console.log(target);
-
 	if (!!target && target.hasAttribute('data-treevalue'))
 	{
 		strTreeValue = target.getAttribute('data-treevalue');
@@ -1863,7 +1860,7 @@ console.log(target);
 		{
 			for (i = 0; i < RowItems.length; i++)
 			{
-				
+
 				BX.removeClass(RowItems[i], 'bx_active');
 			}
 		}

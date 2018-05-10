@@ -5,14 +5,7 @@
 
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
 $APPLICATION->SetTitle("Каталог");
-?><?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "template1", Array(
-	"PATH" => "",	// Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
-		"SITE_ID" => "s1",	// Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
-		"START_FROM" => "2",	// Номер пункта, начиная с которого будет построена навигационная цепочка
-		"COMPONENT_TEMPLATE" => ".default"
-	),
-	false
-);?><!-- begin choice_category_list  --> <?$APPLICATION->IncludeComponent(
+?><!-- begin choice_category_list  --> <?$APPLICATION->IncludeComponent(
 	"bitrix:main.include",
 	"includes",
 	Array(
@@ -23,9 +16,9 @@ $APPLICATION->SetTitle("Каталог");
 		"PATH" => "/local/includes/catalog.php"
 	)
 );?> <?$APPLICATION->IncludeComponent(
-	"bitrix:catalog",
-	".default_old_1",
-	Array(
+	"bitrix:catalog", 
+	".default_old_1", 
+	array(
 		"ACTION_VARIABLE" => "action",
 		"ADD_ELEMENT_CHAIN" => "N",
 		"ADD_PICT_PROP" => "-",
@@ -36,7 +29,7 @@ $APPLICATION->SetTitle("Каталог");
 		"AJAX_OPTION_HISTORY" => "N",
 		"AJAX_OPTION_JUMP" => "N",
 		"AJAX_OPTION_STYLE" => "Y",
-		"BASKET_URL" => "/catalog/basket/",
+		"BASKET_URL" => "/basket/",
 		"BIG_DATA_RCM_TYPE" => "personal",
 		"CACHE_FILTER" => "N",
 		"CACHE_GROUPS" => "Y",
@@ -48,8 +41,12 @@ $APPLICATION->SetTitle("Каталог");
 		"COMPONENT_TEMPLATE" => ".default_old_1",
 		"CONVERT_CURRENCY" => "N",
 		"DETAIL_ADD_DETAIL_TO_SLIDER" => "N",
-		"DETAIL_ADD_TO_BASKET_ACTION" => array(0=>"ADD",),
-		"DETAIL_ADD_TO_BASKET_ACTION_PRIMARY" => array(0=>"ADD",),
+		"DETAIL_ADD_TO_BASKET_ACTION" => array(
+			0 => "ADD",
+		),
+		"DETAIL_ADD_TO_BASKET_ACTION_PRIMARY" => array(
+			0 => "ADD",
+		),
 		"DETAIL_BACKGROUND_IMAGE" => "-",
 		"DETAIL_BRAND_USE" => "N",
 		"DETAIL_BROWSER_TITLE" => "-",
@@ -62,11 +59,25 @@ $APPLICATION->SetTitle("Каталог");
 		"DETAIL_MAIN_BLOCK_PROPERTY_CODE" => "",
 		"DETAIL_META_DESCRIPTION" => "-",
 		"DETAIL_META_KEYWORDS" => "-",
-		"DETAIL_OFFERS_FIELD_CODE" => array(0=>"",1=>"",),
-		"DETAIL_OFFERS_PROPERTY_CODE" => array(0=>"TASTE",1=>"SIZE",2=>"",),
+		"DETAIL_OFFERS_FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"DETAIL_OFFERS_PROPERTY_CODE" => array(
+			0 => "TASTE",
+			1 => "SIZE",
+			2 => "",
+		),
 		"DETAIL_PRODUCT_INFO_BLOCK_ORDER" => "sku,props",
 		"DETAIL_PRODUCT_PAY_BLOCK_ORDER" => "rating,price,priceRanges,quantityLimit,quantity,buttons",
-		"DETAIL_PROPERTY_CODE" => array(0=>"9",1=>"10",2=>"14",3=>"15",4=>"16",5=>"",),
+		"DETAIL_PROPERTY_CODE" => array(
+			0 => "9",
+			1 => "10",
+			2 => "14",
+			3 => "15",
+			4 => "16",
+			5 => "",
+		),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DETAIL_SET_VIEWED_IN_COMPONENT" => "N",
 		"DETAIL_SHOW_BASIS_PRICE" => "Y",
@@ -122,12 +133,21 @@ $APPLICATION->SetTitle("Каталог");
 		"LIST_ENLARGE_PRODUCT" => "STRICT",
 		"LIST_META_DESCRIPTION" => "-",
 		"LIST_META_KEYWORDS" => "-",
-		"LIST_OFFERS_FIELD_CODE" => array(0=>"",1=>"",),
+		"LIST_OFFERS_FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"LIST_OFFERS_LIMIT" => "5",
-		"LIST_OFFERS_PROPERTY_CODE" => array(0=>"",1=>"",),
+		"LIST_OFFERS_PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"LIST_PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
 		"LIST_PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false}]",
-		"LIST_PROPERTY_CODE" => array(0=>"",1=>"",),
+		"LIST_PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"LIST_PROPERTY_CODE_MOBILE" => "",
 		"LIST_SHOW_SLIDER" => "Y",
 		"LIST_SLIDER_INTERVAL" => "3000",
@@ -144,13 +164,19 @@ $APPLICATION->SetTitle("Каталог");
 		"MESS_NOT_AVAILABLE" => "Нет в наличии",
 		"MESS_PRICE_RANGES_TITLE" => "Цены",
 		"MESS_PROPERTIES_TAB" => "Характеристики",
-		"OFFERS_CART_PROPERTIES" => array(0=>"TASTE",1=>"SIZE",),
+		"OFFERS_CART_PROPERTIES" => array(
+			0 => "TASTE",
+			1 => "SIZE",
+		),
 		"OFFERS_SORT_FIELD" => "shows",
 		"OFFERS_SORT_FIELD2" => "shows",
 		"OFFERS_SORT_ORDER" => "asc",
 		"OFFERS_SORT_ORDER2" => "asc",
 		"OFFER_ADD_PICT_PROP" => "-",
-		"OFFER_TREE_PROPS" => array(0=>"TASTE",1=>"SIZE",),
+		"OFFER_TREE_PROPS" => array(
+			0 => "TASTE",
+			1 => "SIZE",
+		),
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
@@ -160,12 +186,15 @@ $APPLICATION->SetTitle("Каталог");
 		"PAGER_TITLE" => "Товары",
 		"PAGE_ELEMENT_COUNT" => "20",
 		"PARTIAL_PRODUCT_PROPERTIES" => "N",
-		"PRICE_CODE" => array(0=>"base",),
+		"PRICE_CODE" => array(
+			0 => "base",
+		),
 		"PRICE_VAT_INCLUDE" => "Y",
 		"PRICE_VAT_SHOW_VALUE" => "N",
 		"PRODUCT_DISPLAY_MODE" => "Y",
 		"PRODUCT_ID_VARIABLE" => "id",
-		"PRODUCT_PROPERTIES" => array(),
+		"PRODUCT_PROPERTIES" => array(
+		),
 		"PRODUCT_PROPS_VARIABLE" => "prop",
 		"PRODUCT_QUANTITY_VARIABLE" => "quantity",
 		"PRODUCT_SUBSCRIPTION" => "Y",
@@ -204,12 +233,21 @@ $APPLICATION->SetTitle("Каталог");
 		"TOP_ELEMENT_SORT_ORDER2" => "asc",
 		"TOP_ENLARGE_PRODUCT" => "STRICT",
 		"TOP_LINE_ELEMENT_COUNT" => "4",
-		"TOP_OFFERS_FIELD_CODE" => array(0=>"",1=>"",),
+		"TOP_OFFERS_FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"TOP_OFFERS_LIMIT" => "5",
-		"TOP_OFFERS_PROPERTY_CODE" => array(0=>"SIZE",1=>"",),
+		"TOP_OFFERS_PROPERTY_CODE" => array(
+			0 => "SIZE",
+			1 => "",
+		),
 		"TOP_PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
 		"TOP_PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false}]",
-		"TOP_PROPERTY_CODE" => array(0=>"",1=>"",),
+		"TOP_PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"TOP_PROPERTY_CODE_MOBILE" => "",
 		"TOP_ROTATE_TIMER" => "30",
 		"TOP_SHOW_SLIDER" => "Y",
@@ -236,8 +274,12 @@ $APPLICATION->SetTitle("Каталог");
 		"USE_REVIEW" => "N",
 		"USE_SALE_BESTSELLERS" => "N",
 		"USE_STORE" => "N",
-		"VARIABLE_ALIASES" => array("ELEMENT_ID"=>"ELEMENT_ID","SECTION_ID"=>"SECTION_ID",)
-	)
+		"VARIABLE_ALIASES" => array(
+			"ELEMENT_ID" => "ELEMENT_ID",
+			"SECTION_ID" => "SECTION_ID",
+		)
+	),
+	false
 );?><!-- end choice_category_list --> <!-- begin content  -->
 <!-- <div class="content">
 	<div class="centered">

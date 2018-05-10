@@ -1,6 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("basket");
+$APPLICATION->SetTitle("Корзина");
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:sale.basket.basket", 
 	".default", 
@@ -45,7 +45,7 @@ $APPLICATION->SetTitle("basket");
 			1 => "SIZE",
 		),
 		"LABEL_PROP_POSITION" => "top-left",
-		"PATH_TO_ORDER" => "/catalog/order",
+		"PATH_TO_ORDER" => "/basket/order",
 		"HIDE_COUPON" => "Y",
 		"PRICE_VAT_SHOW_VALUE" => "N",
 		"USE_PREPAYMENT" => "N",
